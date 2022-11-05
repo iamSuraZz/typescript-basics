@@ -23,10 +23,12 @@ let val: number[];
 hobbies = ["Sports", "Cooking"];
 val = [1];
 
-let person: {
+type Person = {
   name: string;
   age: number;
 };
+
+let person: Person;
 
 person = {
   name: "Ram",
@@ -40,13 +42,10 @@ person = {
 // }
 
 // below accpts array of values having string and number
-let people: {
-  name: string;
-  age: number;
-}[];
+let people: Person[];
 
 // Type inference
 
-let course = "React - The Complete Guide";
+let course: string | number = "React - The Complete Guide";
 
-// course = 124;
+course = 124;
